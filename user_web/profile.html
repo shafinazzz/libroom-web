@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/app-bottom-nav.css" />
+  <link rel="stylesheet" href="css/user-drawer.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="app-bar">
+    <button class="app-bar__menu-btn" id="drawer-menu-btn" aria-label="Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <span class="app-bar__title">Profile</span>
+  </header>
+
+  <main class="profile-content">
+    <div class="profile-avatar" id="profile-avatar">?</div>
+    <p class="profile-name" id="profile-name">Pengguna</p>
+    <p class="profile-email" id="profile-email">-</p>
+    <span class="profile-role-badge" id="profile-role-badge">Orang Luar (Guest)</span>
+
+    <button class="profile-logout-btn" id="profile-logout-btn">
+      <span class="material-symbols-outlined">logout</span>
+      Log Keluar
+    </button>
+  </main>
+
+  <!-- Modal: confirm logout -->
+  <div class="modal-overlay" id="profile-logout-modal-overlay">
+    <div class="modal-box">
+      <h3>Log Keluar</h3>
+      <p>Anda pasti mahu log keluar?</p>
+      <div class="modal-actions">
+        <button id="profile-logout-cancel-btn">Batal</button>
+        <button class="primary" id="profile-logout-confirm-btn">Log Keluar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="bottom-nav-container"></div>
+  <div id="drawer-container"></div>
+
+  <script src="js/supabase-client.js"></script>
+  <script src="js/app-bottom-nav.js"></script>
+  <script src="js/user-drawer.js"></script>
+  <script src="js/profile.js"></script>
+
+</body>
+</html>

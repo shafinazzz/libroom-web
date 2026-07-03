@@ -1,0 +1,144 @@
+/* ============================================
+   Space Form
+   Padanan terus dengan _SpaceFormPageState (Flutter)
+   ============================================ */
+
+.form-content {
+  padding: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.form-section-label {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+/* ---- Image strip ---- */
+.image-strip {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.image-thumb {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.image-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-thumb__remove {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.image-thumb__remove .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.image-add-btn {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #eeeeee;
+  border: 1px solid #bdbdbd;
+  color: #9e9e9e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-add-btn .material-symbols-outlined {
+  font-size: 32px;
+}
+
+/* ---- Rate section ---- */
+.rate-hint {
+  color: #9e9e9e;
+  font-size: 11px;
+  margin: 4px 0 14px;
+}
+
+.rate-category-label {
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+
+.rate-category-label.upsi   { color: #1e88e5; }
+.rate-category-label.agensi { color: #b8860b; }
+.rate-category-label.swasta { color: #ff5252; }
+
+.rate-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.rate-row .form-field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ---- Submit ---- */
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  margin-top: 14px;
+  background: #0a2540;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover {
+  background: #123a63;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn .spinner {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+}

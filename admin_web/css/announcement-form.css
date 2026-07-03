@@ -1,0 +1,122 @@
+/* ============================================
+   Announcement Form
+   Padanan terus dengan _AnnouncementFormPage (Flutter)
+   ============================================ */
+
+.form-content {
+  padding: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-field input[type="text"],
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.form-field input[type="text"]:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: #0a2540;
+  border-width: 2px;
+  padding: 11px; /* elak jump sebab border tebal */
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ---- Date row (padanan ListTile utk pick date) ---- */
+.date-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.date-row__label {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0 0 2px;
+}
+
+.date-row__value {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.date-row__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+}
+
+.date-row__actions .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.date-row input[type="date"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---- Submit button ---- */
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  margin-top: 28px;
+  background: #0a2540;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover {
+  background: #123a63;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn .spinner {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+}

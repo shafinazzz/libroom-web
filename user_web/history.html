@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuanku Bainun Library</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/history.css" />
+  <link rel="stylesheet" href="css/app-bottom-nav.css" />
+  <link rel="stylesheet" href="css/user-drawer.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="app-bar">
+    <button class="app-bar__menu-btn" id="drawer-menu-btn" aria-label="Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <span class="app-bar__title">Tuanku Bainun Library</span>
+  </header>
+
+  <div class="loading-center" id="loading-state">
+    <div class="spinner"></div>
+  </div>
+
+  <main class="history-content" id="page-body" style="display:none;">
+    <h2 class="history-heading">Rekod Tempahan Saya</h2>
+    <div id="history-groups"></div>
+  </main>
+
+  <!-- Modal: booking detail (isi dijana JS) -->
+  <div class="modal-overlay" id="history-detail-modal-overlay"></div>
+
+  <!-- Bottom nav -->
+  <div id="bottom-nav-container"></div>
+  <div id="drawer-container"></div>
+
+  <script src="js/supabase-client.js"></script>
+  <script src="js/app-bottom-nav.js"></script>
+  <script src="js/user-drawer.js"></script>
+  <script src="js/history.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pembayaran</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="css/payment.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/user-drawer.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="app-bar">
+    <button class="app-bar__menu-btn" id="drawer-menu-btn" aria-label="Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <span class="app-bar__title">Pembayaran</span>
+  </header>
+
+  <main class="payment-content">
+
+    <!-- Ringkasan Bil Tempahan -->
+    <div class="payment-card">
+      <p class="payment-card__heading">Ringkasan Bil Tempahan</p>
+      <hr class="payment-divider" />
+      <div id="payment-items"></div>
+      <hr class="payment-divider" />
+      <div class="payment-total-row">
+        <span class="payment-total-row__label">Jumlah Amaun:</span>
+        <span class="payment-total-row__value" id="payment-total-value">RM 0.00</span>
+      </div>
+    </div>
+
+    <!-- Maklumat Hubungan Guest (papar hanya kalau role=guest) -->
+    <div class="payment-card" id="guest-info-section" style="display:none;">
+      <p class="payment-card__heading payment-card__heading--small">Maklumat Hubungan Guest (Wajib)</p>
+      <div style="height:12px;"></div>
+
+      <div class="payment-field">
+        <label for="guest-name-input">Nama Penuh</label>
+        <div class="payment-field-input-wrap">
+          <span class="material-symbols-outlined">person</span>
+          <input type="text" id="guest-name-input" />
+        </div>
+      </div>
+
+      <div class="payment-field">
+        <label for="guest-phone-input">No. Telefon</label>
+        <div class="payment-field-input-wrap">
+          <span class="material-symbols-outlined">call</span>
+          <input type="tel" id="guest-phone-input" />
+        </div>
+      </div>
+
+      <div class="payment-field">
+        <label for="guest-email-input">Alamat Email</label>
+        <div class="payment-field-input-wrap">
+          <span class="material-symbols-outlined">mail</span>
+          <input type="email" id="guest-email-input" />
+        </div>
+      </div>
+
+      <div class="payment-field">
+        <label for="guest-pax-input">Bilangan Pax (Orang)</label>
+        <div class="payment-field-input-wrap">
+          <span class="material-symbols-outlined">groups</span>
+          <input type="number" id="guest-pax-input" />
+        </div>
+      </div>
+
+      <div class="payment-field">
+        <label for="guest-purpose-input">Tujuan Tempahan</label>
+        <div class="payment-field-input-wrap">
+          <span class="material-symbols-outlined">assignment</span>
+          <input type="text" id="guest-purpose-input" />
+        </div>
+      </div>
+    </div>
+
+    <!-- QR Code -->
+    <p class="payment-section-heading">Imbas QR Code Untuk Pembayaran:</p>
+    <div class="qr-code-box">
+      <img src="../assets/qr_payment.jpg" alt="QR pembayaran DuitNow"
+        onerror="this.replaceWith(Object.assign(document.createElement('div'), {
+          className: 'qr-code-box__fallback',
+          textContent: '[ Tempat Gambar QR DuitNow / Akaun Bank ]'
+        }))" />
+    </div>
+
+    <!-- Upload resit -->
+    <p class="payment-section-heading">Muat Naik Bukti Pembayaran / Resit (Wajib):</p>
+    <div class="receipt-upload-row">
+      <button class="receipt-upload-btn" id="receipt-pick-btn">
+        <span class="material-symbols-outlined">upload_file</span>
+        Pilih Fail Resit
+      </button>
+      <span class="receipt-filename" id="receipt-filename">Tiada fail dipilih (Format: PNG, JPEG, JPG, PDF)</span>
+    </div>
+    <input type="file" id="receipt-file-input" accept=".png,.jpg,.jpeg,.pdf" style="display:none;" />
+
+    <!-- Submit -->
+    <button class="payment-submit-btn" id="confirm-pay-btn">
+      <span id="confirm-pay-label">Sahkan Tempahan &amp; Bayar</span>
+      <div class="spinner" id="confirm-pay-spinner" style="display:none;"></div>
+    </button>
+
+  </main>
+
+  <div id="drawer-container"></div>
+
+  <script src="js/supabase-client.js"></script>
+  <script src="js/cart-manager.js"></script>
+  <script src="js/user-drawer.js"></script>
+  <script src="js/payment-page.js"></script>
+
+</body>
+</html>

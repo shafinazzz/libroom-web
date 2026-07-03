@@ -1,0 +1,97 @@
+/* ============================================
+   Announcement Popup
+   Padanan terus dengan checkAndShowAnnouncements() (Flutter)
+   ============================================ */
+
+.announcement-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 350;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.announcement-popup-overlay.open {
+  display: flex;
+}
+
+.announcement-popup-box {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 380px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.announcement-popup__header {
+  background: #0a2540;
+  border-radius: 20px 20px 0 0;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.announcement-popup__header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.announcement-popup__header-label {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  margin: 0;
+}
+
+.announcement-popup__body {
+  padding: 20px;
+}
+
+.announcement-popup__title {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.announcement-popup__content {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  white-space: pre-line;
+}
+
+.announcement-popup__date {
+  font-size: 12px;
+  color: #9e9e9e;
+  margin: 0 0 20px;
+}
+
+.announcement-popup__ok-btn {
+  width: 100%;
+  height: 46px;
+  background: #0a2540;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.announcement-popup__ok-btn:hover {
+  background: #123a63;
+}

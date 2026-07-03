@@ -1,0 +1,77 @@
+/* ============================================
+   Admin Bottom Navigation
+   Padanan terus dengan AdminBottomNav (Flutter)
+   ============================================ */
+
+.admin-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+  z-index: 100;
+}
+
+.admin-bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 0;
+  color: #9e9e9e; /* Colors.grey — unselected */
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  transition: color 0.15s ease;
+}
+
+.admin-bottom-nav__item:hover {
+  color: #0a2540;
+}
+
+.admin-bottom-nav__item.active {
+  color: #0a2540; /* Color(0xFF0A2540) — selected */
+}
+
+.admin-bottom-nav__icon {
+  position: relative;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.admin-bottom-nav__label {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Badge merah bulat — padanan _iconWithBadge() */
+.admin-bottom-nav__badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  background: #f44336; /* Colors.red */
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Elak content page tertutup oleh nav bar */
+body {
+  padding-bottom: 64px;
+}

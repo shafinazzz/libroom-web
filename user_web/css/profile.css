@@ -1,0 +1,102 @@
+/* ============================================
+   Profile Page
+   Padanan terus dengan ProfilePage (Flutter)
+   ============================================ */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  background: #f3f0ff;
+  padding-bottom: 80px; /* atas bottom nav */
+}
+
+.app-bar {
+  height: 56px;
+  background: #0a2540;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.app-bar__menu-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.app-bar__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.profile-content {
+  padding: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #0a2540;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px auto 16px;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+.profile-email {
+  color: #9e9e9e;
+  margin: 0 0 8px;
+}
+
+.profile-role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(30, 136, 229, 0.1);
+  color: #1e88e5;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 32px;
+}
+
+.profile-logout-btn {
+  width: 100%;
+  height: 48px;
+  background: none;
+  border: 1px solid #ff5252;
+  color: #ff5252;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.profile-logout-btn:hover {
+  background: rgba(255, 82, 82, 0.06);
+}

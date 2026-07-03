@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengumuman Baru</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="css/admin-dashboard.css" /> <!-- guna .app-bar -->
+  <link rel="stylesheet" href="css/announcement-form.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <!-- AppBar (tiada hamburger — page ni tak ada drawer, padanan Scaffold tanpa drawer) -->
+  <header class="app-bar">
+    <button class="app-bar__menu-btn" onclick="window.location.href='announcement_management.html'" aria-label="Kembali">
+      <span class="material-symbols-outlined">arrow_back</span>
+    </button>
+    <span class="app-bar__title" id="form-title-heading">Pengumuman Baru</span>
+  </header>
+
+  <main class="form-content">
+
+    <div class="form-field">
+      <label for="title-input">Tajuk</label>
+      <input type="text" id="title-input" />
+    </div>
+
+    <div class="form-field">
+      <label for="content-input">Kandungan</label>
+      <textarea id="content-input" rows="4"></textarea>
+    </div>
+
+    <div class="form-field">
+      <label for="category-select">Kategori</label>
+      <select id="category-select">
+        <option value="notice">Notice</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="update">Update</option>
+        <option value="system">System</option>
+        <option value="policy">Policy</option>
+      </select>
+    </div>
+
+    <!-- Tarikh Mula -->
+    <div class="date-row" id="start-date-row">
+      <div>
+        <p class="date-row__label">Tarikh Mula</p>
+        <p class="date-row__value" id="start-date-display">Tiada (Ongoing)</p>
+      </div>
+      <div class="date-row__actions">
+        <span class="material-symbols-outlined">edit_calendar</span>
+      </div>
+      <input type="date" id="start-date-input" />
+    </div>
+
+    <!-- Tarikh Tamat -->
+    <div class="date-row" id="end-date-row">
+      <div>
+        <p class="date-row__label">Tarikh Tamat (Pilihan)</p>
+        <p class="date-row__value" id="end-date-display">Tiada (Ongoing)</p>
+      </div>
+      <div class="date-row__actions">
+        <button class="icon-btn" id="end-date-clear-btn" aria-label="Kosongkan tarikh tamat" style="display:none;">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <span class="material-symbols-outlined">edit_calendar</span>
+      </div>
+      <input type="date" id="end-date-input" />
+    </div>
+
+    <button class="submit-btn" id="submit-btn">
+      <span id="submit-btn-label">Terbitkan Pengumuman</span>
+      <div class="spinner" id="submit-spinner" style="display:none;"></div>
+    </button>
+
+  </main>
+
+  <script src="js/supabase-client.js"></script>
+  <script src="js/announcement-form.js"></script>
+
+</body>
+</html>

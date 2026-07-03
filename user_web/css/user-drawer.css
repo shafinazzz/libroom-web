@@ -1,0 +1,272 @@
+/* ============================================
+   User Drawer
+   Padanan terus dengan UserDrawer (Flutter)
+   ============================================ */
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.user-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 280px;
+  max-width: 85vw;
+  background: #ffffff;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-drawer.open {
+  transform: translateX(0);
+}
+
+/* ---- Header ---- */
+.user-drawer__header {
+  background: #0a2540;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.user-drawer__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0a2540;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.user-drawer__name {
+  margin: 0 0 2px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.user-drawer__email {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-drawer__role-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+/* ---- Nav list ---- */
+.user-drawer__nav {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 8px;
+}
+
+.user-drawer__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1a1a1a;
+  font-family: inherit;
+}
+
+.user-drawer__item:hover {
+  background: #f5f5f5;
+}
+
+.user-drawer__item .material-symbols-outlined {
+  font-size: 20px;
+  color: #333;
+}
+
+/* ---- Footer / logout ---- */
+.user-drawer__divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 0;
+}
+
+.user-drawer__footer {
+  padding: 16px;
+}
+
+.user-drawer__logout-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 24px;
+  border: 1px solid #ff5252;
+  background: none;
+  color: #ff5252;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.user-drawer__logout-btn:hover {
+  background: rgba(255, 82, 82, 0.08);
+}
+
+/* ============================================
+   About Modal (sama content dengan admin)
+   ============================================ */
+.about-header {
+  position: relative;
+  background: #0a2540;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+}
+
+.about-header .material-symbols-outlined {
+  font-size: 36px;
+}
+
+.about-header h3 {
+  margin: 8px 0 4px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.about-header p {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-header__close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.about-body {
+  padding: 20px;
+  font-size: 12px;
+  color: #1a1a1a;
+}
+
+.about-body h4 {
+  font-size: 13px;
+  margin: 16px 0 6px;
+}
+
+.about-body h4:first-child {
+  margin-top: 0;
+}
+
+.about-body p {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.about-dev-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  align-items: flex-start;
+}
+
+.about-dev-row__num {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.about-dev-row__name {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-dev-row__id {
+  font-size: 11px;
+  color: #9e9e9e;
+  margin: 0;
+}
+
+.about-info-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.about-info-row .material-symbols-outlined {
+  font-size: 16px;
+  color: #0a2540;
+  margin-top: 1px;
+}
+
+.about-info-row__label {
+  font-size: 11px;
+  color: #9e9e9e;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.about-info-row__value {
+  font-size: 12px;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.about-footer {
+  padding: 0 20px 16px;
+  text-align: right;
+}
+
+.about-footer button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0a2540;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.about-footer button:hover {
+  background: #f5f5f5;
+}
