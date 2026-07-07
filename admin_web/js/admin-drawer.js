@@ -91,9 +91,9 @@ function renderAdminDrawer(containerId) {
           <h4>Tentang WBL</h4>
           <p>Work Based Learning (WBL) adalah pendekatan pembelajaran yang menggabungkan teori akademik dengan pengalaman kerja sebenar di industri. Sistem LibRoom ini dibangunkan merangkumi tiga skop utama:
 
-1. Pembangunan Aplikasi Mudah Alih - sistem tempahan bilik berasaskan Flutter untuk platform Android dan web.
+1. Reka Bentuk Pembangunan Aplikasi Mudah Alih - sistem tempahan bilik berasaskan Flutter untuk platform Android dan web.
 
-2. Pembangunan Web - platform web yang boleh diakses secara dalam talian pada bila-bila masa.
+2. Pengaturcaraan Web untuk Sistem Maklumat - platform web yang boleh diakses secara dalam talian pada bila-bila masa.
 
 3. Keusahawanan Digital - sistem ini mengaplikasikan konsep perniagaan digital termasuk pengurusan tempahan, pembayaran dalam talian, dan penjanaan laporan untuk keperluan operasi perpustakaan.</p>
 
