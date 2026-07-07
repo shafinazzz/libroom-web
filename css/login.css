@@ -1,3 +1,7 @@
+/* ============================================
+   Login Screen
+   Padanan terus dengan LoginScreen (Flutter)
+   ============================================ */
 
 * {
   box-sizing: border-box;
@@ -151,4 +155,16 @@ body {
   color: #9e9e9e;
   line-height: 1.5;
   white-space: pre-line;
+}
+
+/* ---- Footer "Powered by" kat bawah page ---- */
+.login-page-footer {
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  z-index: 10;
 }

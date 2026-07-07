@@ -75,7 +75,7 @@ function renderAdminDrawer(containerId) {
 
     <!-- Modal: about -->
     <div class="modal-overlay" id="about-modal-overlay">
-      <div class="modal-box">
+      <div class="modal-box modal-box--about">
         <div class="about-header">
           <button class="about-header__close" id="about-close-btn" aria-label="Tutup">
             <span class="material-symbols-outlined">close</span>
@@ -86,7 +86,7 @@ function renderAdminDrawer(containerId) {
         </div>
         <div class="about-body">
           <h4>Tentang Sistem</h4>
-          <p>LibRoom adalah sistem tempahan bilik dalam talian untuk Perpustakaan Tuanku Bainun, UPSI. Sistem ini membolehkan pengguna (staf, pelajar UPSI dan orang awam) membuat tempahan bilik, seminar, auditorium dan ruang lain secara digital. Admin perpustakaan boleh mengurus tempahan, meluluskan/menolak permohonan, dan menjana laporan bulanan.</p>
+          <p>LibRoom adalah sistem tempahan bilik dalam talian untuk Perpustakaan Tuanku Bainun, UPSI. Sistem ini membolehkan pengguna (staf, pelajar UPSI dan orang awam) membuat tempahan bilik, seminar, auditorium dan ruang lain secara digital. Admin perpustakaan boleh mengurus tempahan, meluluskan/menolak permohonan dan menjana laporan bulanan.</p>
 
           <h4>Tentang WBL</h4>
           <p>Work Based Learning (WBL) adalah pendekatan pembelajaran yang menggabungkan teori akademik dengan pengalaman kerja sebenar di industri. Sistem LibRoom ini dibangunkan merangkumi tiga skop utama:
@@ -127,7 +127,7 @@ function renderAdminDrawer(containerId) {
             <div>
               <p class="about-info-row__label">Subjek</p>
               <p class="about-info-row__value">DTS3073 - Reka Bentuk Pembangunan Aplikasi Mudah Alih
-DTD3053 - Web Programming
+DTD3053 - Pengaturcaraan Web untuk Sistem Maklumat
 DTB3013 - Keusahawanan Digital</p>
             </div>
           </div>
@@ -135,12 +135,24 @@ DTB3013 - Keusahawanan Digital</p>
             <span class="material-symbols-outlined">person</span>
             <div>
               <p class="about-info-row__label">Pensyarah</p>
-              <p class="about-info-row__value">Mr. Rasyidi Bin Johan
+              <p class="about-info-row__value">En. Rasyidi Bin Johan
 Prof. Madya Dr. Aslina Binti Saad
 Dr. Norhisham Bin Mohamad Nordin</p>
             </div>
           </div>
+
+          <div style="height:16px"></div>
+
+          <div class="about-faculty-row">
+            <img class="about-faculty-row__logo" src="../assets/faculty_logo.png" alt="Logo Fakulti"
+              onerror="this.replaceWith(Object.assign(document.createElement('div'), {
+                className: 'about-faculty-row__logo-fallback',
+                innerHTML: '<span class=&quot;material-symbols-outlined&quot;>school</span>'
+              }))" />
+            <p class="about-faculty-row__name">Fakulti Komputeran dan Meta-Teknologi<br>Universiti Pendidikan Sultan Idris</p>
+          </div>
         </div>
+        <div class="about-copyright">© 2026 Fakulti Komputeran dan Meta-Teknologi (FKMT), UPSI. Hak Cipta Terpelihara.</div>
         <div class="about-footer">
           <button id="about-footer-close-btn">Tutup</button>
         </div>
